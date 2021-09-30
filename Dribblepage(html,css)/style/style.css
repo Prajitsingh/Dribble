@@ -1,0 +1,74 @@
+*{
+margin:0;
+padding:0;
+font-family:sans-serif;
+}
+
+.hero{
+height:100vh;
+background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(icon1.jpg);
+background-position:center;
+background-size:cover;
+overflow-x:hidden;
+position:relative;
+}
+/*navbar menu */
+.body-navbar{ 
+   display:flex;
+  padding:10px;
+  background-color: white; 
+}
+/*left menu*/
+.body-navbar-left{
+   margin-left:5%; 
+   flex:1 50%;
+}
+/*right menu*/
+.body-navbar-right{
+   margin-right:8%;
+}
+.body-navbar-left ul li{
+   display: inline-block;
+}
+.body-navbar-left ul li a{
+text-decoration: none;
+color:black;
+padding: 10px;
+margin-top: -2%;
+}
+/*alignment of icons(img)*/
+.body-navbar-left img{
+   vertical-align: bottom;
+   width:20px;
+}
+.body-navbar-right ul li{
+   display: inline-block;
+}
+.body-navbar-right ul li a{
+text-decoration: none;
+color:black;
+padding: 10px;
+margin-top: -2%;
+}
+.body-navbar-right a:hover,.body-navbar-left ul li a:hover{
+   font-weight: bolder;
+   text-decoration: underline;
+}
+.body-navbar-right img{
+   vertical-align: bottom;
+   width:20px;
+}
+
+.banner-title{
+margin:80px 130px;
+color:#fff;
+}
+banner-title h1{
+font-size;:64px;
+margin-bottom:30px;
+}
+
+.banner-title h1 span{
+color:yellow;
+}
+

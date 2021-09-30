@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shop</title>
+    <!--link 2 css files-->
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="explore.css">
+    <meta name="viewport"
+        content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-width">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script>
+        function openSlideMenu() {
+            document.getElementById('menu').style.width = '250px';
+            document.getElementById('content').style.marginLeft = '250px';
+        }
+        function closeSlideMenu() {
+            document.getElementById('menu').style.width = '0';
+            document.getElementById('content').style.marginLeft = '0';
+        }
+    </script>
+     <script>
+        function openSlideMenu2() {
+            document.getElementById('menu2').style.width = '250px';
+            document.getElementById('content2').style.marginLeft = '250px';
+        }
+        function closeSlideMenu2() {
+            document.getElementById('menu2').style.width = '0';
+            document.getElementById('content2').style.marginLeft = '0';
+        }
+    </script>
+</head>
+
+
+<body>
+    <!--nav menu bar-->
+    <div class="body-navbar">
+        <div id="content2">
+            <span class="slide2">
+                <a href="#" class="open2" onclick="openSlideMenu2()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </span>
+            <div id="menu2" class="nav2">
+                <a href="#" class="close2" onclick="closeSlideMenu2()">
+                    <i class="fas fa-times"></i>
+                </a>
+                <a href="home.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="#">Search</a>
+                <a href="#">Sign In</a>
+                <a href="#">Tokens</a>
+                <a href="#">Cart</a>
+                
+
+            </div>
+
+        </div>
+        <div class="body-navbar-left">
+            <ul>
+                <li><img src="img/icon1.png"><a href="home.html">Home</a></li>
+                <li><img src="img/icon2.png"><a href="explore.html">Explore</a></li>
+                <li><img src="img/icon3.png"><a href="#">Search</a></li>
+            </ul>
+        </div>
+        <div class="body-navbar-right">
+            <ul>
+                <li><img src="img/icon4.png"><a href="#">Sign in</a></li>
+                <li><img src="img/icon5.png"><a href="#">Tokens</a></li>
+                <li><img src="img/icon6.png"><a href="#">Cart</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button1')[0]
+        const navbarLinks1 = document.getElementsByClassName('body-navbar-left')[0]
+        const navbarLinks2 = document.getElementsByClassName('body-navbar-right')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks1.classList.toggle('active')
+            navbarLinks2.classList.toggle('active')
+        })
+    </script>
+    <!--sidemenubar-->
+    <div class="sidebar">
+        <!--sidebar header-->
+        <div class="sidebar-header-left">
+            <p>Explore</p>
+        </div>
+        <div class="sidebar-header-right">
+            Sort by:
+            <span>
+                <select class="sidebar-header-dropdown">
+                    <option value="toprated">Top rated</option>
+                </select>
+            </span>
+        </div>
+    </div>
+    <!--sidebar container-->
+    <div class="sidebar-container">
+        <div id="content">
+            <span class="slide">
+                <a href="#" class="open" onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </span>
+            <div id="menu" class="nav">
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                </a>
+                <a href="#">Explore</a>
+                <a href="#">View All</a>
+                <a href="#">By Products (124)</a>
+                <a href="#">By Brands (21)</a>
+                <a href="#">By Collections (8)</a>
+                <a href="#">By People (45)</a>
+                <a href="#">Categories</a>
+                <a href="#">Prices</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-container-left">
+            <!--list of items in sidebar-->
+            <ul>
+                <li><img src="img/icon7.png"><a href="#" id="view_all"><b>View All</b></a></li>
+                <li><img src="img/icon8.png"><a href="#">By Products (124)</a></li>
+                <li><img src="img/icon9.png"><a href="#">By Brands (21)</a></li>
+                <li><img src="img/icon10.png"><a href="#">By Collections (8)</a></li>
+                <li><img src="img/icon11.png"><a href="#">By People (45)</a></li>
+            </ul>
+            <!--categories dropdown-->
+            <div class="sidebar-container-dropdown">
+                <select>
+                    <option value="Categories">Categories</option>
+                </select>
+                <!--list of Categories-->
+                <ul>
+                    <li><a href="#">Women's Fashion</a></li>
+                    <li><a href="#">Men's Fashion</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Movies & TV</a></li>
+                    <li><a href="#">Toys & Games</a></li>
+                    <li><a href="#" id="seeall">See All</a></li>
+                </ul>
+                <!--price dropdown-->
+                <select id="option_price">
+                    <option value="price">Price</option>
+                </select>
+                <div class="price-range">
+                    <ul>
+                        <li><b>Below 1000</b></li>
+                        <li><b>Below 2000</b></li>
+                        <li><b>Below 3000</b></li>
+                        <li><b>Below 4000</b></li>
+                        <li><b>Below 5000</b></li>
+                    </ul>
+                </div>
+
+
+                <!--colors dropdown-->
+                <select id="option_colors">
+                    <option value="colors">Colors </option>
+                </select>
+                <!--list of colors-->
+                <ul class="colors-link">
+                    <li><a href="#"><b>Vintage</b></a></li>
+                    <li><a href="#">Torino</a></li>
+                    <li><a href="#">Black Leather & Graphite S..</a></li>
+                    <li><a href="#">Rum Leather & Olive Canvas</a></li>
+                    <li><a href="#">Black Leather & Olive Canvas </a></li>
+                    <li><a href="#">Suede & Nero </a></li>
+                    <li><a href="#">Suede & Old School </a></li>
+                    <li><a href="#">Nero </a></li>
+                    <li><a href="#" id="seeall">See All</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--main page grid-->
+        <div class="main-container">
+
+            <!--grid item 1-->
+            <div class="main-container-grid">
+                <img src="img/im1.jpg" class="grid-image">
+                <div class="main-container-grid-content">
+                    <p>SPITFIRE</p>
+                </div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <p>Independent Eyeware Brand That <br>is...Simply Put. Obsessed with..</p>
+                    </div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="grid-footer-info">
+                        $78.0
+                        <div>
+                            <span><img src="img/icon12.png">32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 2-->
+            <div class="main-container-grid">
+                <img src="img/im2.jpg" class="grid-image">
+                <div class="space"></div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <p><b>Facial Routine Kit-Wonder <br>Full</b></p>
+                    </div>
+                    <div class="space_one"></div>
+                    <div class="grid-footer-info">
+                        $98.0
+                        <div>
+                            <span><img src="img/icon12.png">82</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 3-->
+            <div class="main-container-grid">
+                <img src="img/im3.jpg" class="grid-image">
+                <div class="space"></div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <span>CAPRERA 07H17 <br><br>
+                            <a href="#" id="caprera_link">By Les Belles Heures</a></span>
+                    </div>
+                    <div class="space"></div>
+                    <div class="grid-footer-info">
+                        $34.0
+                        <div>
+                            <span><img src="img/icon12.png">67</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 4-->
+            <div class="main-container-grid">
+                <img src="img/im4.jpg" id="grid-image-noor">
+                <div class="space_one"></div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <span>Noor Front Cut Out Top <br><br>
+                            <a href="#" id="caprera_link">By Walven</a></span>
+                    </div>
+                    <div class="space"></div>
+                    <div class="space_one"></div>
+                    <div class="space_one"></div>
+                    <div class="grid-footer-info">
+                        $45.0
+                        <div>
+                            <span><img src="img/icon12.png">89</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 5-->
+            <div class="main-container-grid">
+                <img src="img/im5.jpg" class="grid-image">
+                <div class="space_one"></div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <span>Astley Sunglasses <br><br>
+                            <a href="#" id="caprera_link">By Spitfire</a></span>
+                    </div>
+                    <div class="space"></div>
+                    <div class="space"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="grid-footer-info">
+                        $67.0
+                        <div>
+                            <span><img src="img/icon12.png">89</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 6-->
+            <div class="main-container-grid">
+                <img src="img/im6.jpg" class="grid-image">
+                <div class="main-container-grid-content">
+                    <p>FOREVERS</p>
+                </div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <p>Goods Created for Your Daily<br>Journey. Crafted to Last</p>
+                    </div>
+                    <div class="space_one"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="grid-footer-info">
+                        $34.0
+                        <div>
+                            <span><img src="img/icon12.png">76</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 7-->
+            <div class="main-container-grid">
+                <img src="img/im7.jpg" class="grid-image">
+                <div class="main-container-grid-content">
+                    <p>kiko<sup>+</sup> & gg*</p>
+                </div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <p>Hight Quality modern-minimalist</p>
+                        <br>
+                    </div>
+                    <div class="space_one"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="grid-footer-info">
+                        $67.0
+                        <div>
+                            <span><img src="img/icon12.png">34</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 8-->
+            <div class="main-container-grid">
+                <img src="img/im8.jpg" class="grid-image">
+                <div class="space_one"></div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <span>Astley Sunglasses <br><br>
+                            <a href="#" id="caprera_link">By Spitfire</a></span>
+                    </div>
+                    <div class="space"></div>
+                    <div class="space"></div>
+                    <div class="space_two"></div>
+                    
+                    <div class="grid-footer-info">
+                        $76.0
+                        <div>
+                            <span><img src="img/icon12.png">89</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--grid item 9-->
+            <div class="main-container-grid">
+                <img src="img/im9.jpg" class="grid-image">
+                <div class="main-container-grid-content">
+                    <p>FOREO</p>
+                </div>
+                <div class="main-container-grid-info">
+                    <div>
+                        <p>Its Deepest Needs Are No</p>
+                    </div>
+                    <div class="space"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="space_two"></div>
+                    <div class="grid-footer-info">
+                        $99.0
+                        <div>
+                            <span><img src="img/icon12.png">32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
